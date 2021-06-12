@@ -1,0 +1,5 @@
+#Blocking an IP address from IP Table
+iptables -A INPUT -s <ip-address> -j DROP
+
+#Unblocking an IP address from IP Table
+iptables -D INPUT -s <ip-address> -j DROP
