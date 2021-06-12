@@ -6,7 +6,6 @@ DOCUMENT_PATH="$GIT_PROFILE_LINK/cheat-sheet/metadata/document-metadata/document
 SCRIPT_HELPER_SCRIPT_PATH="$GIT_PROFILE_LINK/cheat-sheet/helpers/script-helper.sh"
 DOCUMENT_HELPER_SCRIPT_PATH="$GIT_PROFILE_LINK/cheat-sheet/helpers/document-helper.sh"
 FETCH_SCRIPT_PATH="$GIT_PROFILE_LINK/cheat-sheet/resources/scripts/fetch.sh"
-declare -A PATH_MAP
 declare -A SCRIPT_PATH_MAP
 declare -A DOCUMENT_PATH_MAP
 
@@ -25,6 +24,8 @@ function readPaths() {
 }
 
 function storePathsAsMap() {
+    unset PATH_MAP
+    declare -gA PATH_MAP
     for path in $PATH_LIST; do
         local key=$(echo $path | cut -d "=" -f 1)
         local value=$(echo $path | cut -d "=" -f 2)
@@ -51,7 +52,7 @@ function recreateDocumentHelper() {
     for key in ${!PATH_MAP[@]}; do
         DOCUMENT_PATH_MAP[$key]=${PATH_MAP[$key]}
     done
-    DOCUMENT_LIST=$(createListFromMap $DOCUMENT_PATH)
+    DOCUMENT_LIST=$(createListFromMap)
 }
 
 function recreateScriptHelper() {
@@ -60,7 +61,7 @@ function recreateScriptHelper() {
     for key in ${!PATH_MAP[@]}; do
         SCRIPT_PATH_MAP[$key]=${PATH_MAP[$key]}
     done
-    SCRIPT_LIST=$(createListFromMap $SCRIPT_PATH)
+    SCRIPT_LIST=$(createListFromMap)
 }
 
 function main() {
