@@ -1,13 +1,14 @@
 #!/bin/bash
 
-GIT_PROFILE_LINK="http://localhost:8080"
-SCRIPT_PATH="$GIT_PROFILE_LINK/cheat-sheet/metadata/script-metadata/script_paths"
-DOCUMENT_METADATA_PATH="$GIT_PROFILE_LINK/cheat-sheet/metadata/document-metadata/document_paths"
-SCRIPT_HELPER_SCRIPT_PATH="$GIT_PROFILE_LINK/cheat-sheet/helpers/script-helper.sh"
-DOCUMENT_HELPER_SCRIPT_PATH="$GIT_PROFILE_LINK/cheat-sheet/helpers/document-helper.sh"
-FETCH_SCRIPT_PATH="$GIT_PROFILE_LINK/cheat-sheet/resources/scripts/fetch.sh"
-SCRIPT_BASE_URL="$GIT_PROFILE_LINK/cheat-sheet/resources/scripts"
-DOCUMENT_BASE_URL="$GIT_PROFILE_LINK/cheat-sheet/resources/documents"
+GIT_BRANCH="/main"
+GIT_PROFILE_LINK="https://raw.githubusercontent.com/nikhilpriyanshu"
+SCRIPT_PATH="$GIT_PROFILE_LINK/cheat-sheet$GIT_BRANCH/metadata/script-metadata/script_paths"
+DOCUMENT_METADATA_PATH="$GIT_PROFILE_LINK/cheat-sheet$GIT_BRANCH/metadata/document-metadata/document_paths"
+SCRIPT_HELPER_SCRIPT_PATH="$GIT_PROFILE_LINK/cheat-sheet$GIT_BRANCH/helpers/script-helper.sh"
+DOCUMENT_HELPER_SCRIPT_PATH="$GIT_PROFILE_LINK/cheat-sheet$GIT_BRANCH/helpers/document-helper.sh"
+FETCH_SCRIPT_PATH="$GIT_PROFILE_LINK/cheat-sheet$GIT_BRANCH/resources/scripts/fetch.sh"
+SCRIPT_BASE_URL="$GIT_PROFILE_LINK/cheat-sheet$GIT_BRANCH/resources/scripts"
+DOCUMENT_BASE_URL="$GIT_PROFILE_LINK/cheat-sheet$GIT_BRANCH/resources/documents"
 declare -A SCRIPT_PATH_MAP
 declare -A DOCUMENT_PATH_MAP
 
