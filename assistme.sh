@@ -40,7 +40,7 @@ function createListFromMap() {
     LIST=""
     for key in ${!PATH_MAP[@]}; do
         local length=$(($(echo ${PATH_MAP[$key]} | grep -o "/" | wc -l)+1))
-        LIST+=$(echo ${PATH_MAP[$key]} | cut -d "/" -f "$length")
+        LIST+=$(echo ${PATH_MAP[$key]} | cut -d "/" -f "$length")" "
     done
     echo $LIST
 }

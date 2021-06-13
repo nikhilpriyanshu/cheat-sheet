@@ -1,1 +1,4 @@
 iptables=/ubuntu/tools/iptables
+git=/tools/git
+mvn=/tools/mvn
+postman=/tools/postman

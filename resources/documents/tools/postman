@@ -1,0 +1,2 @@
+#Workaround to run Postman
+sudo apt -y install libgconf2-4 - Postman fails to run without this dependency
