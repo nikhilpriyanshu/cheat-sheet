@@ -7,7 +7,9 @@ function assistme.document-helper.list-documents() {
 function assistme.document-helper.show-document() {
     echo $DOCUMENT_LIST | grep $1 &> /dev/null
     if [[ $? -eq 0 ]]; then
-        fetch ${DOCUMENT_PATH_MAP[BASE_URL]}${DOCUMENT_PATH_MAP[$1]}
+        fetch $DOCUMENT_BASE_URL${DOCUMENT_PATH_MAP[$1]}
+    else
+        echo "Failed to fetch documents $1" 
     fi
 }
 

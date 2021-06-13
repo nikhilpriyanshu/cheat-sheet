@@ -1,6 +1,7 @@
 #!/bin/bash
 
 function fetch() {
+    echo $1
     local response="$(curl --silent -o- $1)"
     local responseCode=$?
     if [[ $responseCode -eq 0 ]]; then

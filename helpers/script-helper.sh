@@ -5,9 +5,11 @@ function assistme.script-helper.list-scripts() {
 }
 
 function assistme.script-helper.show-script() {
-    echo $DOCUMENT_LIST | grep $1 &> /dev/null
+    echo $SCRIPT_LIST | grep $1 &> /dev/null
     if [[ $? -eq 0 ]]; then
-        fetch ${SCRIPT_PATH_MAP[BASE_URL]}${SCRIPT_PATH_MAP[$1]}
+        fetch $SCRIPT_BASE_URL${SCRIPT_PATH_MAP[$1]}
+    else
+        echo "Failed to fetch script $1" 
     fi
 }
 
