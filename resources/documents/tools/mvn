@@ -1,2 +1,7 @@
 #Download all dependency to work offline
 mvn dependency:go-offline
+
+#Maven plugins:
+1. Apache Maven Assembly Plugin - This plugin can be used to assemble directories and files to a output directory or an archieve.
+2. Exec Maven Plugin - This plugin can be used to executed system level commands or java programs.
+3. Apache Maven AntRun Plugin - This plugin can be used to run ant tasks from within maven
