@@ -5,11 +5,11 @@
 
 3. Delete text preceeding cursor position - ctrl + u
 
-4. Add the deleted text from any of the step 2 and 3 - ctrl + y
+4. Add the deleted text from any of the steps 2 or 3 - ctrl + y
 
 5. Delete previous word in the command (space is the delimiter) - ctrl + w
 
-6. Delete precious word in the command (special character is the delimiter) - alt + backspace
+6. Delete previous word in the command (special character is the delimiter) - alt + backspace
 
 7. Instead of attaching a log file to tail -f use less + F (follow mode)
    Comment: This helps keeping the log file contents at out disposal.
