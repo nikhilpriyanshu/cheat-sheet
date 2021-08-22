@@ -1,0 +1,24 @@
+1. When a command failed in absence of sudo use command "sudo !!"
+   Comment: "!!" points to the last run command
+   
+2. Delete text leading cursor position - ctrl + k
+
+3. Delete text preceeding cursor position - ctrl + u
+
+4. Add the deleted text from any of the step 2 and 3 - ctrl + y
+
+5. Delete previous word in the command (space is the delimiter) - ctrl + w
+
+6. Delete precious word in the command (special character is the delimiter) - alt + backspace
+
+7. Instead of attaching a log file to tail -f use less + F (follow mode)
+   Comment: This helps keeping the log file contents at out disposal.
+            Use ctrl + c to exit follow mode
+            Use shift + f to enter follow mode again
+            
+8. When typing complex multiline script or command use ctrl - x - e
+   Comment: It opens the default editor ($EDITOR) where the content can be typed
+   
+9. When last command arguments is needed usr - alt + .
+
+10. To fix a messy terminal use the command reset
