@@ -1,3 +1,9 @@
+#Set global user
+git config --global user.name "Your Name"
+
+#Set global email
+git config --global user.email youremail@example.com
+
 #Uncommit last N commit in git
 git reset --soft HEAD~N
 
